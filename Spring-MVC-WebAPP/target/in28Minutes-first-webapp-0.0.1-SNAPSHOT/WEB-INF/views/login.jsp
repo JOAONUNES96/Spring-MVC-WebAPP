@@ -11,7 +11,7 @@
     <title>Yahoo!!</title>
 </head>
 <body>
-<form action="/login.do" method="POST">
+<form action="/login.do/welcome" method="POST">
     Name : <input name="name" type="text" /> <input type="submit" />
 </form>
 </body>
