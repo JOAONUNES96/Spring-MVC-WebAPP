@@ -1,2 +1,2 @@
-webapp/UserValidationService.class
-webapp/LoginServlet.class
+com/in28minutes/jee/UserValidationService.class
+com/in28minutes/jee/LoginServlet.class
