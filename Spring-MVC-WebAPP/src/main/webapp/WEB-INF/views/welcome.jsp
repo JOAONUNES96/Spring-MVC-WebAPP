@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Yahoo!!</title>
 </head>
 <body>
-It worked!!!!!!! ${name}
+Welcome ${name}. You are now authenticated.
 </body>
 </html>

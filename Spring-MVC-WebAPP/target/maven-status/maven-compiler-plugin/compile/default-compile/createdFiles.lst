@@ -1,3 +1,2 @@
-com/in28minutes/jee/UserValidationService.class
-com/in28minutes/LoginController.class
-com/in28minutes/jee/LoginServlet.class
+com/in28minutes/login/LoginService.class
+com/in28minutes/login/LoginController.class
