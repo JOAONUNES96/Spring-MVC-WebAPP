@@ -11,6 +11,8 @@
     <title>Yahoo!!</title>
 </head>
 <body>
-Welcome ${name}. You are now authenticated.
+Welcome ${name}. You are now authenticated. <BR/>
+
+Now, you can <a href="/myapp/list-todos?name=${name}">manage your todos</a>
 </body>
 </html>
