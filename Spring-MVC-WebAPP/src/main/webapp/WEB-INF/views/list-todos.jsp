@@ -11,6 +11,8 @@
 </head>
 <body>
 <H1>Your Todos ${name}</H1>
-${todos}
+${todos} <BR/>
+
+<a class="button" href="/myapp/add-todos">Add</a>
 </body>
 </html>
