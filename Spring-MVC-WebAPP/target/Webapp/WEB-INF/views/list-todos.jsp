@@ -23,9 +23,8 @@
 </head>
 <body>
 <div class="container">
+    <caption>Your Todos are</caption>
     <table class="table table-striped">
-        <caption>Your Todos are</caption>
-
         <thead>
         <tr>
             <th>Description</th>
