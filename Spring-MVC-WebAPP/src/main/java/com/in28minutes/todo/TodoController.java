@@ -3,10 +3,12 @@ package com.in28minutes.todo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import com.in28minutes.todo.TodoService;
 
+import javax.validation.Valid;
 import java.util.Date;
 
 
@@ -31,7 +33,10 @@ public class TodoController {
     }
 
     @RequestMapping(value = "/add-todos", method = RequestMethod.POST)
-    public String addTodo(@ModelAttribute("todo") Todo todo) {
+    public String addTodo(@ModelAttribute("todo") @Valid Todo todo, BindingResult result) {
+        if(result.hasErrors()){
+            return "todo";
+        }
         service.addTodo("joao", todo.getDesc(), new Date(), false);
         return "redirect:list-todos";
     }
