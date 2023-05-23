@@ -25,13 +25,17 @@
     <H1>Add a Todo to your list</H1>
     <BR/>
     <form:form action="/myapp/add-todos" method="post" commandName="todo">
+
+        <form:hidden path="id"/>
+
+
         <fieldset class="form-group">
             <form:label path="desc">Description</form:label>
             <form:input path="desc" type="text" class="form-control" required="required"/>
             <form:errors path="desc" cssClass="text-bg-warning" />
         </fieldset>
         <BR/>
-        <button type="submit" class="btn btn-success">Add</button>
+        <button type="submit" formmethod="post" class="btn btn-success">Submit</button>
     </form:form>
 </div>
 
