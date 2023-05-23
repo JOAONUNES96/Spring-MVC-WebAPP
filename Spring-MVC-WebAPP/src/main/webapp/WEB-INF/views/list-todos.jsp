@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
 <html>
 <head>
     <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
@@ -39,6 +40,7 @@
                 <td>${todo.desc}</td>
                 <td>${todo.targetDate}</td>
                 <td>${todo.done}</td>
+                <td><a href="/myapp/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
             </tr>
         </c:forEach>
         </tbody>
