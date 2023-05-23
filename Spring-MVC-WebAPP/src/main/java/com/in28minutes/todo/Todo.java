@@ -19,6 +19,9 @@ public class Todo {
         this.isDone = isDone;
     }
 
+    public Todo() {
+    }
+
     public int getId() {
         return id;
     }

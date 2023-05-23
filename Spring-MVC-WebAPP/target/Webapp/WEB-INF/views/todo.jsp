@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,13 +24,14 @@
 <div class="container">
     <H1>Add a Todo to your list</H1>
     <BR/>
-    <form action="/myapp/add-todos" method="post">
+    <form:form action="/myapp/add-todos" method="post" commandName="todo">
         <fieldset class="form-group">
-            <label>Description</label>
-            <input name="desc" type="text" class="form-control" required="required"/>
+            <form:label path="desc">Description</form:label>
+            <form:input path="desc" type="text" class="form-control" required="required"/>
         </fieldset>
+        <BR/>
         <button type="submit" class="btn btn-success">Add</button>
-    </form>
+    </form:form>
 </div>
 
 <script src="${pageContext.request.contextPath}/resources/js/jquery-3.7.0.min.js"></script>
