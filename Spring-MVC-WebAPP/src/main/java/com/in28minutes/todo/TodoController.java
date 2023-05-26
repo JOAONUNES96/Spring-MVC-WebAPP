@@ -29,13 +29,17 @@ public class TodoController {
     @RequestMapping(value = "/list-todos", method = RequestMethod.GET)
     public String listTodos(@RequestParam String name, ModelMap model) {
        model.addAttribute("name", name);
-        model.addAttribute("todos", service.retrieveTodos("joao"));
+        model.addAttribute("todos", service.retrieveTodos(retrieveLoggedinUserName()));
         return "list-todos";
+    }
+
+    private static String retrieveLoggedinUserName() {
+        return "joao";
     }
 
     @RequestMapping(value = "/add-todos", method = RequestMethod.GET)
     public String showTodoPage(ModelMap model) {
-        model.addAttribute("todo", new Todo(0,"joao","your todo", new Date(), false));
+        model.addAttribute("todo", new Todo(0, retrieveLoggedinUserName(),"your todo", new Date(), false));
         return "todo";
     }
 
@@ -44,7 +48,7 @@ public class TodoController {
         if(result.hasErrors()){
             return "todo";
         }
-        service.addTodo("joao", todo.getDesc(), todo.getTargetDate(), false);
+        service.addTodo(retrieveLoggedinUserName(), todo.getDesc(), todo.getTargetDate(), false);
         return "redirect:list-todos";
     }
 
@@ -65,7 +69,7 @@ public class TodoController {
         if (result.hasErrors())
             return "edit-todo";
 
-        todo.setUser("joao"); //TODO:Remove Hardcoding Later
+        todo.setUser(retrieveLoggedinUserName()); //TODO:Remove Hardcoding Later
         service.updateTodo(todo);
 
         return "redirect:list-todos";

@@ -1,5 +1,5 @@
 /Users/joaonunes/Documents/Spring-MVC-WebAPP/Spring-MVC-WebAPP/src/main/java/com/in28minutes/todo/Todo.java
 /Users/joaonunes/Documents/Spring-MVC-WebAPP/Spring-MVC-WebAPP/src/main/java/com/in28minutes/todo/TodoService.java
-/Users/joaonunes/Documents/Spring-MVC-WebAPP/Spring-MVC-WebAPP/src/main/java/com/in28minutes/login/LoginController.java
-/Users/joaonunes/Documents/Spring-MVC-WebAPP/Spring-MVC-WebAPP/src/main/java/com/in28minutes/login/LoginService.java
 /Users/joaonunes/Documents/Spring-MVC-WebAPP/Spring-MVC-WebAPP/src/main/java/com/in28minutes/todo/TodoController.java
+/Users/joaonunes/Documents/Spring-MVC-WebAPP/Spring-MVC-WebAPP/src/main/java/com/in28minutes/login/WelcomeController.java
+/Users/joaonunes/Documents/Spring-MVC-WebAPP/Spring-MVC-WebAPP/src/main/java/com/in28minutes/security/SecurityConfiguration.java
