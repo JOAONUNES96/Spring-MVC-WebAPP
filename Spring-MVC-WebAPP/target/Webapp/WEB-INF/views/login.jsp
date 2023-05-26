@@ -9,9 +9,32 @@
 <%@ include file="common/header.jspf" %>
 <%@ include file="common/navigation.jspf" %>
 <body>
-<p><font color="red">${errorMessage}</font></p>
-<form action="/myapp/login" method="POST">
-    Name : <input name="name" type="text" /> Password : <input name="password" type="password" /> <input type="submit" />
-</form>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Login</h2>
+                    <c:if test="${not empty errorMessage}">
+                        <div class="alert alert-danger" role="alert">
+                                ${errorMessage}
+                        </div>
+                    </c:if>
+                    <form action="/myapp/login" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input name="name" type="text" class="form-control" id="name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input name="password" type="password" class="form-control" id="password" />
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <%@ include file="common/footer.jspf"%>

@@ -6,10 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ include file="common/header.jspf" %>
 <%@ include file="common/navigation.jspf" %>
-    <body>
+<body>
 <div class="container">
     <H1>Add a Todo to your list</H1>
     <BR/>
@@ -21,15 +21,14 @@
         <fieldset class="form-group">
             <form:label path="desc">Description</form:label>
             <form:input path="desc" type="text" class="form-control" required="required"/>
-            <form:errors path="desc" cssClass="text-bg-warning" />
+            <form:errors path="desc" cssClass="text-bg-warning"/>
         </fieldset>
 
         <fieldset class="form-group">
             <form:label path="targetDate">TargetDate</form:label>
             <form:input path="targetDate" type="text" class="form-control" required="required"/>
-            <form:errors path="targetDate" cssClass="text-bg-warning" />
+            <form:errors path="targetDate" cssClass="text-bg-warning"/>
         </fieldset>
-
 
 
         <BR/>
@@ -37,4 +36,4 @@
     </form:form>
 </div>
 
-<%@ include file="common/footer.jspf"%>
+<%@ include file="common/footer.jspf" %>
