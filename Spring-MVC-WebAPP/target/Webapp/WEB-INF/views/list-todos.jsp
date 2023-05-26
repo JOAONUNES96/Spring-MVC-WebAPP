@@ -5,26 +5,14 @@
   Time: 13:35
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.rtl.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap-grid.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap-grid.rtl.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap-reboot.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap-reboot.rtl.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap-utilities.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap-utilities.rtl.css" rel="stylesheet">
 
 
-    <title>Todos for ${name}</title>
+<%@ include file="common/header.jspf" %>
+<%@ include file="common/navigation.jspf" %>
 
-</head>
 <body>
 <div class="container">
-    <caption>Your Todos are</caption>
+    <caption></caption>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -33,12 +21,11 @@
             <th>Completed</th>
         </tr>
         </thead>
-
         <tbody>
         <c:forEach items="${todos}" var="todo">
             <tr>
                 <td>${todo.desc}</td>
-                <td>${todo.targetDate}</td>
+                <td><ftm:formatDate pattern="dd/MM/yyyy" value="${todo.targetDate}"/></td>
                 <td>${todo.done}</td>
                 <td><a href="/myapp/edit-todo?id=${todo.id}" class="btn btn-warning">Update</a></td>
                 <td><a href="/myapp/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
