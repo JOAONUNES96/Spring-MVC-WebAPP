@@ -1,0 +1,14 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: joaonunes
+  Date: 26/05/2023
+  Time: 14:34
+  To change this template use File | Settings | File Templates.
+--%>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.7.0.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.esm.js"></script>
+
+</body>
+</html>

@@ -37,11 +37,4 @@
         <a class="btn btn-success" href="/myapp/add-todos">Add</a>
     </div>
 </div>
-
-<script src="${pageContext.request.contextPath}/resources/js/jquery-3.7.0.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.js"></script>
-<script src="${pageContext.request.contextPath}/resources/js/bootstrap.js"></script>
-<script src="${pageContext.request.contextPath}/resources/js/bootstrap.esm.js"></script>
-
-</body>
-</html>
+<%@ include file="common/footer.jspf"%>
