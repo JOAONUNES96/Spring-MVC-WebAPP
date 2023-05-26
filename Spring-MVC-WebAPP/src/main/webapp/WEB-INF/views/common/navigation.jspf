@@ -16,6 +16,8 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="/myapp/">Home <span class="sr-only"></span></a>
       <a class="nav-item nav-link" href="/myapp/list-todos?name=${name}">Todos</a>
+      <a class="nav-item nav-link" href="/myapp/logout">Logout</a>
+
     </div>
   </div>
 </nav>
