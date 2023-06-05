@@ -19,3 +19,5 @@ I learnt about:
 If you want to run the webApp with tomcat check your tomcat configuration (for localhost:8080) and the link for the first page should be http://localhost:8080/myapp/login
 
 I am still working on this project, and want to implement a DB after everything is working properly. 
+
+![GIF Recording 2023-06-02 at 2 51 36 PM](https://github.com/JOAONUNES96/Spring-MVC-WebAPP/assets/116366430/dc4a347c-30d0-4134-924d-49c68abe2f9c)
