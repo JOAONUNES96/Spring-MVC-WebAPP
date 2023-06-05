@@ -1,5 +1,8 @@
 package com.in28minutes.todo;
 
+import com.in28minutes.exception.ExceptionController;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomBooleanEditor;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -11,6 +14,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,7 +23,7 @@ import java.util.Date;
 @Controller
 @SessionAttributes("name")
 public class TodoController {
-
+    private Log logger = LogFactory.getLog(ExceptionController.class);
     @Autowired
     private TodoService service;
     @InitBinder
@@ -82,6 +86,11 @@ public class TodoController {
         return "redirect:list-todos";
     }
 
+    @ExceptionHandler(value = Exception.class)
+    public String handleError(HttpServletRequest req, Exception exception) {
+        logger.error("Request: " + req.getRequestURL() + " raised " + exception);
+        return "error";
+    }
 
 
 }
