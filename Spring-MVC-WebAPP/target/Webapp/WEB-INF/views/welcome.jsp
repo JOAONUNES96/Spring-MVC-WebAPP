@@ -18,7 +18,7 @@
                     <h2 class="card-title text-center">Welcome ${name}!</h2>
                     <p class="card-text text-center">You are now authenticated.</p>
                     <div class="d-grid gap-2">
-                        <a href="/myapp/list-todos?name=${name}" class="btn btn-primary btn-lg">Manage your todos</a>
+                        <a href="myapp/list-todos?name=${name}" class="btn btn-primary btn-lg">Manage your todos</a>
                     </div>
                 </div>
             </div>

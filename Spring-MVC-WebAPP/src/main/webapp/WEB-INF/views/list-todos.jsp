@@ -26,7 +26,7 @@
             <tr>
                 <td>${todo.desc}</td>
                 <td><ftm:formatDate pattern="dd/MM/yyyy" value="${todo.targetDate}"/></td>
-                <td>${todo.done}</td>
+                <td>${todo.isDone}</td>
                 <td><a href="/myapp/edit-todo?id=${todo.id}" class="btn btn-warning">Update</a></td>
                 <td><a href="/myapp/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
             </tr>

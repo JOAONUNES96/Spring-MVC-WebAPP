@@ -50,7 +50,7 @@ public class TodoController {
 
     @RequestMapping(value = "/add-todos", method = RequestMethod.GET)
     public String showTodoPage(ModelMap model) {
-        model.addAttribute("todo", new Todo(0, retrieveLoggedinUserName(),"your todo", new Date(), false));
+        model.addAttribute("todo", new Todo(retrieveLoggedinUserName(),"your todo", new Date(), false));
         return "todo";
     }
 

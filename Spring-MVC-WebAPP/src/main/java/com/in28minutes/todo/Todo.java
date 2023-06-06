@@ -5,7 +5,7 @@ import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.Objects;
 @Entity
-@Table(name = "todo")
+@Table(name = "todos")
 public class Todo {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,19 +20,15 @@ private int id;
     @Column(name = "isDone")
     private boolean isDone;
 
-    public Todo(int id, String user, String desc, Date targetDate, boolean isDone) {
-        this.id = id;
+    public Todo(String user, String desc, Date targetDate, boolean isDone) {
+
         this.user = user;
         this.desc = desc;
         this.targetDate = targetDate;
         this.isDone = isDone;
     }
 
-    public Todo() {
-    }
 
-    public Todo(String name, String desc, Date targetDate, boolean isDone) {
-    }
 
     public int getId() {
         return id;
