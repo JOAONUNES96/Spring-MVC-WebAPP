@@ -1,16 +1,23 @@
 package com.in28minutes.todo;
 
+import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.Objects;
-
+@Entity
+@Table(name = "todo")
 public class Todo {
-
-    private int id;
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private int id;
+@Column(name = "user")
     private String user;
     @Size(min=6, message = "Enter at least 6 characters")
+    @Column(name = "desc")
     private String desc;
+    @Column(name = "targetDate")
     private Date targetDate;
+    @Column(name = "isDone")
     private boolean isDone;
 
     public Todo(int id, String user, String desc, Date targetDate, boolean isDone) {
@@ -22,6 +29,9 @@ public class Todo {
     }
 
     public Todo() {
+    }
+
+    public Todo(String name, String desc, Date targetDate, boolean isDone) {
     }
 
     public int getId() {
